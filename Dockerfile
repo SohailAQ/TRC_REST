@@ -21,6 +21,7 @@ RUN python -m venv /py && \
 	adduser --disabled-password --no-create-home app && \
 	mkdir -p /vol/web/static && \
 	mkdir -p /vol/web/media && \
+	chown -R app:app /app && \
 	chown -R app:app /vol && \
 	chmod -R 755 /vol && \
 	chmod -R +x /scripts

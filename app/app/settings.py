@@ -28,10 +28,10 @@ DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS.extend(
-	filter(
-		None,
-		os.environ.get('ALLOWED_HOSTS', '').split(','),
-	)
+    filter(
+        None,
+        os.environ.get('ALLOWED_HOSTS', '').split(','),
+    )
 )
 
 # Application definition
@@ -135,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/static/'
 MEDIA_URL = '/static/media/'
 
-STATIC_ROOT = 'vol/web/static'
+STATIC_ROOT = '/vol/web/static'
 MEDIA_ROOT = '/vol/web/media'
 
 # Default primary key field type
