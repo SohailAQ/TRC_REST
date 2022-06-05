@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from rest_framework.documentation import include_docs_urls
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -26,6 +26,9 @@ urlpatterns = [
 
     # REST management
     path('api/', include('todos.urls')),
+
+    # Documentation
+    path('docs/', include_docs_urls(title='TRC API')),
 ]
 
 if settings.DEBUG:
